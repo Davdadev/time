@@ -1,4 +1,14 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Display</title>
+</head>
+<body>
+    <div id="datetime">Loading...</div>
+
+    <script>
         // Function to update date and time every second
         function updateDateTime() {
             const now = new Date();
@@ -12,3 +22,11 @@
             const formattedDateTime = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
             document.getElementById("datetime").textContent = formattedDateTime;
         }
+
+        // Initial call
+        updateDateTime();
+        // Update every second
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>
